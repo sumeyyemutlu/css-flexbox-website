@@ -19,17 +19,17 @@ h1,h2,p{
 }
 h1{
     font-weight: 800;
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   
 }
 h2{
     font-weight: 800;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
  
 }
 p{
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     
 }
 img{
@@ -66,7 +66,10 @@ nav{
 }
 nav box-icon {
     display: none;
+    cursor: pointer;
+   
 }
+
 nav ul{
     list-style-type: none;
 }
@@ -78,18 +81,108 @@ nav ul li a:hover{
     color: #4CAF50;
     transition: .5s ease-in-out;
 }
+.header-content {
+    width: 50%;
+    position: relative;
+    top:16%;
+    left:8%;
+}
+form {
+    margin: 2.4rem 0;
+}
+input{
+    font-size: 1.8rem;
+}
+input[type=text],
+input[type=email]
+{
+    width: 50%;
+    padding:12px 20px;
+    margin:1.2rem 0;
+    display: block;
+    border: 1px solid #ccc
+}
+
+input[type=submit]{
+    width: 50%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 14px 20px;
+    margin:8px 0;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: medium;
+}
+input[type=submit]:hover{
+    background-color: #48a54b;
+}
+input::placeholder{
+    font-size: 1.3rem;
+    color: rgb(189, 187, 187);
+}
+.about-left,
+.about-middle,
+.about-right {
+    flex-basis: 30%;
+    padding: 1.7rem;
+}
+.btn{
+    width: 50%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    margin:2rem 0;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*********** Media screen ************/
 
 @media only screen and (max-width:768px) {
     nav{
         flex-direction: column;
-        position: relative;
+        position: relative;/*nav a position relative dedik artık altında absolute olarak tanımladığımız
+        eleman buradaki relativden ötürü bodyden değil de navdan itibaren kendini konumlandıracak*/
     }
     nav box-icon {
         display: block;
         position: absolute;
         top: 18px;
         right: 32px;
+    }
+    nav ul{
+        background: whitesmoke;
+        display: none;
+    }
+    .showmenu {
+        display: block;
+    }
+    nav ul li{
+        display: block;/*yukarıda inline block olarak tanımlanmıştı */
+        padding: 2% 0;
+    }
+    nav ul li a{
+        color: #222;
     }
 }
