@@ -102,6 +102,11 @@ input[type=email]
     display: block;
     border: 1px solid #ccc
 }
+input[type=text],
+input[type=email]:focus{
+    outline: none;
+    border: 1px solid rgb(179, 177, 177) ;
+}
 
 input[type=submit]{
     width: 50%;
@@ -221,16 +226,51 @@ input::placeholder{
 .testimony .image{
     height: 80px;
     width: 80px;
+   
+    
 }
+
 .testimony img{
     height: 100%;
     width: 100%;
     border-radius: 50%;
     object-fit: cover;
+   
+    
+}
+.contact .row {
+    justify-content: center;
+}
+.contact form {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-
-
+.contact form input{
+    width: 50%;
+}
+.contact textarea{
+    width: 50%;
+    height: 150px;
+    border: 1px solid #ccc; 
+    font-size: 1.3rem;
+    resize: none;
+    margin: 1.2rem 0;
+    font-family: "Poppins" sans-serif;
+    color:#222
+   
+}
+.contact textarea::placeholder{
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 1.3rem;
+}
+.contact textarea:focus{
+    border: 1px solid rgb(177, 169, 169);
+    outline: none;
+}
 
 
 
